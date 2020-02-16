@@ -8,6 +8,27 @@ namespace _1_TypyGeneryczne
         {
             var kolejka = new KolejkaKolowa<double>(pojemnosc: 3);
           
+            WprowadzanieDanych(kolejka);
+
+            PrzetwarzanieDanych(kolejka);
+        }
+
+        private static void PrzetwarzanieDanych(KolejkaKolowa<double> kolejka)
+        {
+            var sum = 0.0;
+            Console.WriteLine("W naszej kolejce jest :");
+
+            while (!kolejka.JestPusty)
+            {
+                sum += kolejka.Czytaj();
+                //   Console.WriteLine("\t\t" + kolejka.Czytaj());
+            }
+
+            Console.WriteLine(sum);
+        }
+
+        private static void WprowadzanieDanych(KolejkaKolowa<double> kolejka)
+        {
             while (true)
             {
                 var wartosc = 0.0d;
@@ -18,21 +39,10 @@ namespace _1_TypyGeneryczne
                 {
                     kolejka.Zapisz(wartosc);
                     continue;
-                    
                 }
+
                 break;
             }
-
-            Console.WriteLine("W naszej kolejce jest :");
-
-            while (!kolejka.JestPusty)
-            {
-                Console.WriteLine("\t\t" +kolejka.Czytaj());
-            }
-
-
-
-
         }
     }
 }
