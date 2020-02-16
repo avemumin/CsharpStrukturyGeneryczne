@@ -10,6 +10,11 @@ namespace _1_TypyGeneryczne
     {
         static void Main(string[] args)
         {
+            
+
+            
+          
+          
         }
     }
 }
