@@ -22,6 +22,7 @@
         {
             bufor[koniecBufora] = wartosc;
             koniecBufora = (koniecBufora + 1) % bufor.Length;
+
             if (koniecBufora == poczatekBufora)
                 poczatekBufora = (poczatekBufora + 1) % bufor.Length;
         }
