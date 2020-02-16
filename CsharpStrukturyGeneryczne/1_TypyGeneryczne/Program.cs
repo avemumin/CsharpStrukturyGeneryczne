@@ -7,8 +7,8 @@ namespace _1_TypyGeneryczne
         static void Main(string[] args)
         {
             var kolejka = new KolejkaKolowa<double>(pojemnosc: 3);
-            bool flaga = true;
-            while (flaga)
+          
+            while (true)
             {
                 var wartosc = 0.0d;
                 var replaceCommaDot = Console.ReadLine();
