@@ -40,7 +40,6 @@ namespace _1_TypyGeneryczne
                     kolejka.Zapisz(wartosc);
                     continue;
                 }
-
                 break;
             }
         }
