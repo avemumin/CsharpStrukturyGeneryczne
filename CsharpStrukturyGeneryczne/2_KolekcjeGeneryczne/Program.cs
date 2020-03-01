@@ -10,6 +10,23 @@ namespace _2_KolekcjeGeneryczne
     {
         static void Main(string[] args)
         {
+            Pracownik[] pracownicy = new Pracownik[]
+            {
+                new Pracownik {Imie = "Marcin", Nazwisko = "Nowak"},
+                new Pracownik {Imie = "Jan", Nazwisko = "Nowak"},
+                new Pracownik {Imie = "Tomek", Nazwisko = "Nowak"},
+            };
+
+            foreach (var pracownik in pracownicy)
+            {
+                Console.WriteLine(pracownik.Imie + " " + pracownik.Nazwisko);
+            }
+
+            Console.WriteLine(Environment.NewLine);
+            for (int i = 0; i < pracownicy.Length; i++)
+            {
+                Console.WriteLine(pracownicy[i].Imie + " " + pracownicy[i].Nazwisko);
+            }
         }
     }
 }
