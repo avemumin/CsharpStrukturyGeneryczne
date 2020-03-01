@@ -10,6 +10,7 @@ namespace _2_KolekcjeGeneryczne
     {
         static void Main(string[] args)
         {
+
             Pracownik[] pracownicy = new Pracownik[]
             {
                 new Pracownik {Imie = "Marcin", Nazwisko = "Nowak"},
@@ -30,7 +31,43 @@ namespace _2_KolekcjeGeneryczne
 
             //rozszerzenie wielkosci tablicy
             Array.Resize(ref pracownicy, 10);
-            pracownicy[9] = new Pracownik{Imie = "Anatol", Nazwisko = "Koszyk"};
+            pracownicy[9] = new Pracownik { Imie = "Anatol", Nazwisko = "Koszyk" };
+
+
+            //Listy
+
+            List<Pracownik> pracownicyLista = new List<Pracownik>()
+            {
+                new Pracownik {Imie = "Marcin", Nazwisko = "Nowak"},
+                new Pracownik {Imie = "Jan", Nazwisko = "Nowak"},
+                new Pracownik {Imie = "Tomek", Nazwisko = "Nowak"},
+            };
+
+            pracownicyLista.Add(new Pracownik { Imie = "Anna", Nazwisko = "Kos" });
+            foreach (var pracownik in pracownicyLista)
+            {
+                Console.WriteLine(pracownik.Imie + " " + pracownik.Nazwisko);
+            }
+
+            Console.WriteLine(Environment.NewLine);
+            for (int i = 0; i < pracownicyLista.Count; i++)
+            {
+                Console.WriteLine(pracownicyLista[i].Imie + " " + pracownicyLista[i].Nazwisko);
+            }
+
+            var liczby = new List<int>();
+            var pojemnosc = -1;
+
+            while (true)
+            {
+                if (liczby.Capacity != pojemnosc)
+                {
+                    pojemnosc = liczby.Capacity;
+                    Console.WriteLine(pojemnosc);
+                }
+                liczby.Add(1);
+
+            }
         }
     }
 }
