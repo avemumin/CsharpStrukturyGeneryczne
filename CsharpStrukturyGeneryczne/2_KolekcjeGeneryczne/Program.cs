@@ -27,6 +27,10 @@ namespace _2_KolekcjeGeneryczne
             {
                 Console.WriteLine(pracownicy[i].Imie + " " + pracownicy[i].Nazwisko);
             }
+
+            //rozszerzenie wielkosci tablicy
+            Array.Resize(ref pracownicy, 10);
+            pracownicy[9] = new Pracownik{Imie = "Anatol", Nazwisko = "Koszyk"};
         }
     }
 }
