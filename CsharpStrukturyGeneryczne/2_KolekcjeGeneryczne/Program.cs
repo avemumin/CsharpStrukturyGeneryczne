@@ -71,6 +71,7 @@ namespace _2_KolekcjeGeneryczne
 
             //Kolejka
 
+
             Queue<Pracownik> kolejka = new Queue<Pracownik>();
             kolejka.Enqueue(new Pracownik { Imie = "Marcin", Nazwisko = "Nowak" });
             kolejka.Enqueue(new Pracownik { Imie = "Wojtek", Nazwisko = "Starak" });
