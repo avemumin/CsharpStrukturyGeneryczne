@@ -10,7 +10,7 @@ namespace _2_KolekcjeGeneryczne
     {
         static void Main(string[] args)
         {
-
+            //Tablice
             Pracownik[] pracownicy = new Pracownik[]
             {
                 new Pracownik {Imie = "Marcin", Nazwisko = "Nowak"},
@@ -58,7 +58,7 @@ namespace _2_KolekcjeGeneryczne
             var liczby = new List<int>();
             var pojemnosc = -1;
 
-            while (true)
+            while (!true)
             {
                 if (liczby.Capacity != pojemnosc)
                 {
@@ -68,6 +68,28 @@ namespace _2_KolekcjeGeneryczne
                 liczby.Add(1);
 
             }
+
+            //Kolejka
+
+            Queue<Pracownik> kolejka = new Queue<Pracownik>();
+            kolejka.Enqueue(new Pracownik { Imie = "Marcin", Nazwisko = "Nowak" });
+            kolejka.Enqueue(new Pracownik { Imie = "Wojtek", Nazwisko = "Starak" });
+            kolejka.Enqueue(new Pracownik { Imie = "Ola", Nazwisko = "Jabola" });
+            kolejka.Enqueue(new Pracownik { Imie = "Marysia", Nazwisko = "Pysia" });
+            kolejka.Enqueue(new Pracownik { Imie = "Ula", Nazwisko = "Srula" });
+
+            
+            foreach (var kolejPracow in kolejka)
+            {
+                Console.WriteLine(kolejPracow.Imie + "  "+ kolejPracow.Nazwisko);   
+            }
+
+            while (kolejka.Count>0)
+            {
+                var pracownik =   kolejka.Dequeue();
+                Console.WriteLine(pracownik.Imie + " "+ pracownik.Nazwisko);
+            }
+
         }
     }
 }
